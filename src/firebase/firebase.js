@@ -13,6 +13,8 @@ const config = {
 
 firebase.initializeApp(config);
 const database = firebase.database();
+const storageRef = firebase.storage().ref();
+const imagesRef = storageRef.child('images');
 const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
 export { firebase, googleAuthProvider, database as default };

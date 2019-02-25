@@ -1,7 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
-
+import FileUploader from "react-firebase-file-uploader";
+import { firebase, googleAuthProvider } from '../firebase/firebase';
 export default class ProjectForm extends React.Component {
   constructor(props) {
     super(props);
@@ -11,21 +12,35 @@ export default class ProjectForm extends React.Component {
       githubLink: props.project ? props.project.githubLink : '',
       description: props.project ? props.project.description : '',
       languages: props.project ? props.project.languages : {},
+      isUploading: false,
+      progress: 0,
       pictures: props.project ? props.project.pictures : {},
       createdAt: props.project ? moment(props.project.createdAt) : moment(),
       calendarFocused: false
     };
   }
+  handleUploadStart = () => this.setState({ isUploading: true, progress: 0});
+  handleProgress = progress => this.setState({ progress });
+  handleUploadError = error => {
+    this.setState({ isUploading: false });
+    console.log(error);
+  }
+  handleUploadSuccess = filename => {
+    this.setState({ avatar: filename, progress: 100, isUploading: false });
+    firebase.storage().ref("images").child(filename).getDownloadUrl().then(
+      url => this.setState({ avatarURL: url })
+    );
+  };
   onTitleChange = (e) => {
-    const note = e.target.value;
+    const title = e.target.value;
     this.setState(()=>({ title }));
   };
   onLiveLinkChange = (e) => {
-    const note = e.target.value;
+    const liveLink = e.target.value;
     this.setState(()=>({ liveLink }));
   };
   onGithubLinkChange = (e) => {
-    const note = e.target.value;
+    const githubLink = e.target.value;
     this.setState(()=>({ githubLink }));
   };
   onDescriptionChange = (e) => {
@@ -33,11 +48,11 @@ export default class ProjectForm extends React.Component {
     this.setState(()=> ({ description }));
   };
   onLanguagesChange = (e) => {
-    const note = e.target.value;
+    const languages = e.target.value;
     this.setState(()=>({ languages }));
   };
   onPicturesChange = (e) => {
-    const note = e.target.value;
+    const pictures = e.target.value;
     this.setState(()=>({ pictures }));
   };
   onDateChange = (createdAt) => {
@@ -50,8 +65,8 @@ export default class ProjectForm extends React.Component {
   };
   onSubmit = (e) => {
     e.preventDefault();
-    if (!this.state.description || !this.state.amount) {
-      this.setState(()=>({ error: 'Please provide description and amount.'}));
+    if (!this.state.title) {
+      this.setState(()=>({ error: 'Please provide a title for your project'}));
     } else {
       this.setState(() => ({error: ''}));
       this.props.onSubmit({
@@ -70,7 +85,7 @@ export default class ProjectForm extends React.Component {
           {this.state.error && <p className="form__error">{this.state.error}</p>}
           <input
             type="text"
-            placeholder="Application Title"
+            placeholder="Project Title"
             autoFocus
             className="text-input"
             value={this.state.title}
@@ -78,38 +93,43 @@ export default class ProjectForm extends React.Component {
           />
           <input
             type="text"
-            placeholder="liveLink"
+            placeholder="Live Link"
             className="text-input"
             value={this.state.liveLink}
             onChange={this.onLiveLinkChange}
           />
           <input
             type="text"
-            placeholder="githubLink"
+            placeholder="Github Link"
             className="text-input"
             value={this.state.githubLink}
             onChange={this.onGithubLinkChange}
           />
           <input
             type="text"
-            placeholder="liveLink"
+            placeholder="Project Description"
             className="text-input"
             value={this.state.description}
             onChange={this.onDescriptionChange}
           />
           <input
             type="text"
-            placeholder="liveLink"
+            placeholder="Languages"
             className="text-input"
             value={this.state.languages}
             onChange={this.onLanguagesChange}
           />
-          <input
-            type="text"
-            placeholder="liveLink"
-            className="text-input"
-            value={this.state.pictures}
-            onChange={this.onPicturesChange}
+          {this.state.isUploading && <p>Progress: {this.state.progress}</p>}
+          {this.state.avatarURL && <img src={this.state.avatarURL} />}
+          <FileUploader
+            accept="image/*"
+            name="avatar"
+            randomizeFilename
+            storageRef={firebase.storage().ref("images")}
+            onUploadStart={this.handleUploadStart}
+            onUploadError={this.handleUploadSuccess}
+            onUploadSuccess={this.handleUploadSuccess}
+            onProgress={this.handleProgress}
           />
           <SingleDatePicker
           date={this.state.createdAt}

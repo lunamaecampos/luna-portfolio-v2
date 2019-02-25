@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import ProjectForm from './ProjectForm';
 import { startAddProject } from '../actions/projects';
 
-export class AddExpensePage extends React.Component {
+export class AddProjectPage extends React.Component {
   onSubmit=(project) => {
     this.props.startAddProject(project);
     this.props.history.push('/');
