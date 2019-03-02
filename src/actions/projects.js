@@ -16,10 +16,12 @@ export const startAddProject = (projectData = {}) => {
       githubLink = '',
       description = '',
       languages = {},
+      picture = '',
+      pictureUrl = '',
       pictures = {},
       createdAt = 0,
     } = projectData;
-    const project = { title, liveLink, githubLink, description, languages, pictures, createdAt }
+    const project = { title, liveLink, githubLink, description, languages, pictures, picture, pictureUrl, createdAt }
 
     return database.ref(`users/${uid}/projects`).push(project).then((ref) =>{
         dispatch(addProject({
@@ -70,7 +72,7 @@ export const startSetProjects = () => {
     const uid = getState().auth.uid;
 
     return database.ref(`users/${uid}/projects`).once('value').then((snapshot) => {
-        const projects = [];
+        const projects = ['hello'];
         snapshot.forEach((childSnapshot) => {
           projects.push({
             id: childSnapshot.key,

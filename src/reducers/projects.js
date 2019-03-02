@@ -3,6 +3,7 @@ const projectsReducerDefaultState = [];
 export default (state = projectsReducerDefaultState, action) => {
   switch (action.type) {
     case 'ADD_PROJECT':
+    console.log("hello adding");
       return [
         ...state,
         action.project
@@ -21,6 +22,7 @@ export default (state = projectsReducerDefaultState, action) => {
         };
       });
     case 'SET_PROJECTS':
+      console.log("hello");
       return action.projects;
     default:
       return state;

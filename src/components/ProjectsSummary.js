@@ -19,6 +19,7 @@ export const ProjectsSummary = ({ allProjectCount }) => {
 
 const mapStateToProps = (state) => {
   const allProjectCount = state.projects.length;
+  console.log(state);
   return {
     allProjectCount: allProjectCount
   };

@@ -14,6 +14,8 @@ export default class ProjectForm extends React.Component {
       languages: props.project ? props.project.languages : {},
       isUploading: false,
       progress: 0,
+      picture: '',
+      pictureUrl: '',
       pictures: props.project ? props.project.pictures : {},
       createdAt: props.project ? moment(props.project.createdAt) : moment(),
       calendarFocused: false
@@ -24,12 +26,12 @@ export default class ProjectForm extends React.Component {
   handleUploadError = error => {
     this.setState({ isUploading: false });
     console.log(error);
-  }
+  };
   handleUploadSuccess = filename => {
-    this.setState({ avatar: filename, progress: 100, isUploading: false });
-    firebase.storage().ref("images").child(filename).getDownloadUrl().then(
-      url => this.setState({ avatarURL: url })
-    );
+    this.setState({ picture: filename, progress: 100, isUploading: false });
+    firebase.storage().ref(`images/${filename}`).getDownloadURL().then(
+      url => this.setState({pictureUrl: url})
+    )
   };
   onTitleChange = (e) => {
     const title = e.target.value;
@@ -75,7 +77,8 @@ export default class ProjectForm extends React.Component {
         githubLink: this.state.githubLink,
         description: this.state.description,
         languages: this.state.languages,
-        pictures: this.state.pictures
+        picture: this.state.picture,
+        pictureUrl: this.state.pictureUrl
       });
     }
   };
@@ -116,14 +119,13 @@ export default class ProjectForm extends React.Component {
             type="text"
             placeholder="Languages"
             className="text-input"
-            value={this.state.languages}
             onChange={this.onLanguagesChange}
           />
           {this.state.isUploading && <p>Progress: {this.state.progress}</p>}
-          {this.state.avatarURL && <img src={this.state.avatarURL} />}
+          {this.state.pictureUrl && <img src={this.state.pictureUrl} />}
           <FileUploader
             accept="image/*"
-            name="avatar"
+            name="picture"
             randomizeFilename
             storageRef={firebase.storage().ref("images")}
             onUploadStart={this.handleUploadStart}
