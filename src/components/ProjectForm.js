@@ -12,12 +12,12 @@ export default class ProjectForm extends React.Component {
       githubLink: props.project ? props.project.githubLink : '',
       description: props.project ? props.project.description : '',
       languages: props.project ? props.project.languages : {},
-      isUploading: false,
-      progress: 0,
-      picture: '',
-      pictureUrl: '',
+      picture: props.project ? props.project.picture : '',
+      pictureUrl: props.project ? props.project.pictureUrl : '',
       pictures: props.project ? props.project.pictures : {},
       createdAt: props.project ? moment(props.project.createdAt) : moment(),
+      isUploading: false,
+      progress: 0,
       calendarFocused: false
     };
   }
@@ -78,7 +78,8 @@ export default class ProjectForm extends React.Component {
         description: this.state.description,
         languages: this.state.languages,
         picture: this.state.picture,
-        pictureUrl: this.state.pictureUrl
+        pictureUrl: this.state.pictureUrl,
+        createdAt: this.state.createdAt.valueOf()
       });
     }
   };

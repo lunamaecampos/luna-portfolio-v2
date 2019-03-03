@@ -5,12 +5,13 @@ import numeral from 'numeral';
 import selectProjects from '../selectors/projects';
 
 export const ProjectsSummary = ({ allProjectCount }) => {
+  const projectWord = allProjectCount === 1 ? 'project' : 'projects';
   return (
     <div className="page-header">
       <div className="content-container">
-      <h1 className="page-header__title">You have {allProjectCount} project(s)</h1>
+      <h1 className="page-header__title">You have {allProjectCount} {projectWord}</h1>
         <div className="page-header__actions">
-          <Link className="button" to="/create">Add Project</Link>
+          <Link className="button" to="/create">Add A Project</Link>
         </div>
       </div>
     </div>
@@ -19,7 +20,6 @@ export const ProjectsSummary = ({ allProjectCount }) => {
 
 const mapStateToProps = (state) => {
   const allProjectCount = state.projects.length;
-  console.log(state);
   return {
     allProjectCount: allProjectCount
   };

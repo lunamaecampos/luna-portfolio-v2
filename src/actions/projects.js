@@ -72,7 +72,7 @@ export const startSetProjects = () => {
     const uid = getState().auth.uid;
 
     return database.ref(`users/${uid}/projects`).once('value').then((snapshot) => {
-        const projects = ['hello'];
+        const projects = [];
         snapshot.forEach((childSnapshot) => {
           projects.push({
             id: childSnapshot.key,

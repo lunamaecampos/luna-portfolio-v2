@@ -33,10 +33,12 @@ ReactDOM.render(<LoadingPage />, document.getElementById('app'));
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
     store.dispatch(login(user.uid));
+    store.dispatch(startSetProjects()).then(() => {
       renderApp();
       if (history.location.pathname === '/login') {
         history.push('/dashboard');
       }
+    });
   } else {
     store.dispatch(logout());
     renderApp();
