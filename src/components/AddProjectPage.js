@@ -6,7 +6,7 @@ import { startAddProject } from '../actions/projects';
 export class AddProjectPage extends React.Component {
   onSubmit=(project) => {
     this.props.startAddProject(project);
-    this.props.history.push('/');
+    this.props.history.push('/dashboard');
   };
   render() {
     return (

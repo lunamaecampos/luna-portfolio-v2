@@ -1,0 +1,45 @@
+.main-wrapper {
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  overflow: hidden;
+}
+.info-card {
+  // background-color: yellow;
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.title {
+  width: 480px;
+  color: $off-white;
+  // background-color: orange;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+.column {
+  // background: red;
+  width:128px;
+  height: 100%;
+  display: inline-block;
+}
+.text-column {
+  margin-left: $s-size;
+  // vertical-align: top;
+  // background: green;
+  height: 100%;
+  display: inline-block;
+}
+.portrait {
+  transform: rotate(-20deg);
+  width:128px;
+  border-radius: 50%;
+}

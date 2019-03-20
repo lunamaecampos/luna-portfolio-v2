@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 import FileUploader from "react-firebase-file-uploader";
@@ -11,15 +12,27 @@ export default class ProjectForm extends React.Component {
       liveLink: props.project ? props.project.liveLink : '',
       githubLink: props.project ? props.project.githubLink : '',
       description: props.project ? props.project.description : '',
-      languages: props.project ? props.project.languages : {},
+      languages: props.project ? props.project.languages : '',
       picture: props.project ? props.project.picture : '',
+      prevPictureUrlRef: props.project ? props.project.picture : '',
       pictureUrl: props.project ? props.project.pictureUrl : '',
-      pictures: props.project ? props.project.pictures : {},
       createdAt: props.project ? moment(props.project.createdAt) : moment(),
       isUploading: false,
       progress: 0,
       calendarFocused: false
     };
+    this.submission = false;
+  }
+  componentWillUnmount () {
+    const prevPictureUrlRef = firebase.storage().ref(`images/${this.state.prevPictureUrlRef}`)
+    if (
+      this.state.progress===100
+      && this.state.pictureUrl!=prevPictureUrlRef
+      && this.state.prevPictureUrlRef!=''
+      && this.submission===false
+    ) {
+      firebase.storage().ref(`images/${this.state.picture}`).delete()
+    }
   }
   handleUploadStart = () => this.setState({ isUploading: true, progress: 0});
   handleProgress = progress => this.setState({ progress });
@@ -53,10 +66,6 @@ export default class ProjectForm extends React.Component {
     const languages = e.target.value;
     this.setState(()=>({ languages }));
   };
-  onPicturesChange = (e) => {
-    const pictures = e.target.value;
-    this.setState(()=>({ pictures }));
-  };
   onDateChange = (createdAt) => {
     if (createdAt) {
       this.setState(()=>({createdAt}));
@@ -71,6 +80,14 @@ export default class ProjectForm extends React.Component {
       this.setState(()=>({ error: 'Please provide a title for your project'}));
     } else {
       this.setState(() => ({error: ''}));
+      const prevPictureUrlRef = firebase.storage().ref(`images/${this.state.prevPictureUrlRef}`)
+      if (
+        this.state.prevPictureUrlRef != ''
+        && this.state.progress===100
+      ) {
+        prevPictureUrlRef.delete()
+      }
+      this.submission = true;
       this.props.onSubmit({
         title: this.state.title,
         liveLink: this.state.liveLink,
@@ -109,10 +126,10 @@ export default class ProjectForm extends React.Component {
             value={this.state.githubLink}
             onChange={this.onGithubLinkChange}
           />
-          <input
+          <textarea
             type="text"
             placeholder="Project Description"
-            className="text-input"
+            className="textarea"
             value={this.state.description}
             onChange={this.onDescriptionChange}
           />
@@ -120,10 +137,18 @@ export default class ProjectForm extends React.Component {
             type="text"
             placeholder="Languages"
             className="text-input"
+            value={this.state.languages}
             onChange={this.onLanguagesChange}
           />
           {this.state.isUploading && <p>Progress: {this.state.progress}</p>}
-          {this.state.pictureUrl && <img src={this.state.pictureUrl} />}
+          {this.state.pictureUrl &&
+            <img
+            className="image-upload-preview"
+            value={this.state.pictureUrl}
+            onChange={this.onPictureUrlChange}
+            src={this.state.pictureUrl}
+            />
+          }
           <FileUploader
             accept="image/*"
             name="picture"
@@ -143,7 +168,7 @@ export default class ProjectForm extends React.Component {
           isOutsideRange={()=> false}
           />
           <div>
-            <button className="button">Save Project</button>
+            <input type="submit" value="Save Project" className="button" />
           </div>
         </form>
     )

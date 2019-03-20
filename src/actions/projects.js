@@ -15,13 +15,12 @@ export const startAddProject = (projectData = {}) => {
       liveLink = '',
       githubLink = '',
       description = '',
-      languages = {},
+      languages = '',
       picture = '',
       pictureUrl = '',
-      pictures = {},
       createdAt = 0,
     } = projectData;
-    const project = { title, liveLink, githubLink, description, languages, pictures, picture, pictureUrl, createdAt }
+    const project = { title, liveLink, githubLink, description, languages, picture, pictureUrl, createdAt }
 
     return database.ref(`users/${uid}/projects`).push(project).then((ref) =>{
         dispatch(addProject({
@@ -55,7 +54,7 @@ export const editProject = (id, updates) => ({
 export const startEditProject = (id, updates) => {
   return (dispatch, getState) => {
     const uid = getState().auth.uid;
-    return database.ref(`users/${uid}/projects/${id}`).update(projects).then(() => {
+    return database.ref(`users/${uid}/projects/${id}`).update(updates).then(() => {
       dispatch(editProject(id, updates));
     });
   };

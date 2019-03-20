@@ -11,11 +11,11 @@ export class EditProjectPage extends React.Component {
   }
   onSubmit=(project) => {
     this.props.startEditProject(this.props.project.id, project);
-    this.props.history.push('/');
+    this.props.history.push('/dashboard');
   };
   onRemove=()=>{
     this.props.startRemoveProject({ id: this.props.project.id });
-    this.props.history.push('/');
+    this.props.history.push('/dashboard');
   };
   openModal=()=>{
     this.setState(()=>({modalisOpen: true}));

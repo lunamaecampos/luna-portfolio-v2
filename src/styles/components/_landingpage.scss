@@ -1,0 +1,36 @@
+.landing-wrapper {
+  height: calc(100vh - 80px);
+  background: url('/images/landing-desk.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  overflow: hidden;
+}
+.landing-title {
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+.landing-subtitle {
+  font-size: $l-size;
+  text-align: center;
+}
+.landing-icon-row {
+  text-align: center;
+}
+.landing-icon {
+  height: 56px;
+  margin-left: $s-size;
+}
+.title-card {
+  align-self: center;
+  background-color: $terminal-black;
+  width: auto;
+  padding: $s-size;
+  margin-left: auto;
+  margin-right: auto;
+  color: #008F11;
+  border: 1px solid $dark-grey;
+  border-radius: 2px;
+}

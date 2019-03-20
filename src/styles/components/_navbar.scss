@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  height: auto;
+  border-bottom: 2px solid $dark-grey;
+  background-color: $terminal-black;
+}
+.navbar-item {
+  color: $off-white;
+  align-items: center;
+  font-weight: 500;
+  min-height: 80px;
+  line-height: 80px;
+  flex-grow: 1;
+  display: inline;
+  border-right: 2px solid $dark-grey;
+  text-align: center;
+}
+.navbar-icon {
+  padding-left: $s-size;
+  height: 2em;
+  margin: auto;
+}
+.searchbar {
+  flex-grow: 8;
+  background: none;
+  font-size: 2em;
+  font-weight: 300;
+  border: none;
+  padding: $s-size;
+}
+.searchbar:focus {
+  outline: none;
+  color: $off-white;
+}
+.corner {
+  width: 100px;
+  display: inline-block;
+  padding: $s-size;
+  color: $off-white;
+  font-size: $font-size-large;
+  font-weight: 500;
+  border-right: 2px solid $dark-grey;
+}
