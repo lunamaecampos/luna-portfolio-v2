@@ -12,6 +12,9 @@ import 'react-dates/lib/css/_datepicker.css';
 import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 
+import { useState, useEffect, useRef } from "react";
+import useTypewriter from "react-typewriter-hook";
+
 const store = configureStore();
 
 const jsx = (

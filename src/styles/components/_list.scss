@@ -1,3 +1,7 @@
+.dashboard-page {
+  background-color: white;
+  color: black;
+}
 .list-header {
   background: $off-white;
   border: 1px solid darken($off-white, 7%);
@@ -7,6 +11,7 @@
   padding: $s-size $m-size;
 }
 .list-body {
+  background-color: white;
   margin-bottom: $m-size;
   @media (min-width: $desktop-breakpoint) {
     margin-bottom: $l-size;
@@ -54,6 +59,11 @@
 }
 
 .list-item__data {
+  width: 75%;
+  height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin: $s-size 0 0 0;
   @media (min-width: $desktop-breakpoint) {
     margin: 0;

@@ -4,20 +4,31 @@
 
 a {
   text-decoration: none;
-  color: black;
 }
-
+li {
+    display: inline;
+}
+li::before {
+  content: " \00b7 ";
+  font-size: 1.2em;
+  font-weight: bold;
+}
 html {
   font-size: 62.5%;
 }
 body {
-  background-color: $terminal-black;
+  // background-color: white;
+  background-color: none;
+  // background-color: $space-grey;
   color: $off-white;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
 }
 button {
+  cursor: pointer;
+}
+label > img:hover {
   cursor: pointer;
 }
 

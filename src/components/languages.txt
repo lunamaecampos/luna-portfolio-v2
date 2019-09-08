@@ -1,0 +1,28 @@
+Languages:
+C++
+Python
+Javascript
+Swift
+HTML5/CSS3/SCSS
+
+
+Frameworks/Libraries:
+Flask
+Django
+ReactJs (w/ Redux)
+AngularJs
+JQuery
+
+Databases:
+MySQL
+SQLite
+MongoDB
+Firebase Realtime Database
+
+
+Related Technical Skills:
+Git/Github Version Control
+Command Line Interface
+AWS Deployment
+Heroku Deployment
+AWS S3 Bucket

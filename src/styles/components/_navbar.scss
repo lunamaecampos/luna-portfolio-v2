@@ -1,43 +1,139 @@
 .navbar {
+  height: 60px;
   display: flex;
-  height: auto;
   border-bottom: 2px solid $dark-grey;
-  background-color: $terminal-black;
+  background-color: $yellow;
+  color: $nike-black;
+  position:  relative;
+  z-index: 100;
+  @media (min-width: $desktop-breakpoint) {
+    height: 80px;
+  }
+}
+.navbar > a {
+  color: $nike-black;
+}
+.navbar > a:hover {
+  background-color: darken($yellow, 15%);
+  transition: .5s;
 }
 .navbar-item {
-  color: $off-white;
-  align-items: center;
-  font-weight: 500;
-  min-height: 80px;
-  line-height: 80px;
-  flex-grow: 1;
-  display: inline;
-  border-right: 2px solid $dark-grey;
-  text-align: center;
+  line-height: 60px;
+    display: none;
+    @media (min-width: $desktop-breakpoint) {
+    align-items: center;
+    font-weight: 500;
+    line-height: 80px;
+    flex-grow: 1;
+    display: inline;
+    border-right: 2px solid $dark-grey;
+    text-align: center;
+  }
 }
-.navbar-icon {
-  padding-left: $s-size;
-  height: 2em;
+.navbar-menu-item {
+  @extend .navbar-item;
+  display: block;
+  // border-bottom: 2px solid $dark-grey;
+  font-size: $font-size-large;
+  color: $nike-black;
+  padding-left: $xl-size;
+}
+.navbar-menu-item:hover {
+  transition: .3s;
+  color: red;
+}
+
+.navbar-item:hover{
+  .ul {
+    display:block;
+  }
+}
+
+.search-icon {
   margin: auto;
+  padding-left: $s-size;
+  height: 32px;
+  @media (min-width: $desktop-breakpoint) {
+    height: 2em;
+  }
 }
 .searchbar {
-  flex-grow: 8;
-  background: none;
-  font-size: 2em;
-  font-weight: 300;
-  border: none;
-  padding: $s-size;
+    flex-grow: 8;
+    background: none;
+    font-weight: 300;
+    border: none;
+    padding: $s-size;
+    font-size: $font-size-xl;
+    @media (min-width: $desktop-breakpoint) {
+      font-size: 2em;
+    }
 }
 .searchbar:focus {
   outline: none;
-  color: $off-white;
+  color: $nike-black;
 }
 .corner {
-  width: 100px;
+  display: none;
+  @media (min-width: $desktop-breakpoint) {
+    width: 100px;
+    display: inline-block;
+    padding: $s-size;
+    font-size: $font-size-large;
+    font-weight: 500;
+    border-right: 2px solid $dark-grey;
+  }
+}
+.navbar-menu {
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+  background-color: $yellow;
+  padding-top: 60px;
+  margin-top: 60px;
+  height: calc(100vh - 60px);
+  width: 100vw;
+  border-right: 2px solid $dark-grey;
+  position: absolute;
+  @media (min-width: $desktop-breakpoint) {
+    display: none;
+  }
+}
+.navbar-menu-icon {
+  @media (min-width: $desktop-breakpoint) {
+    display: none;
+  }
+  width: 60px;
   display: inline-block;
   padding: $s-size;
-  color: $off-white;
-  font-size: $font-size-large;
-  font-weight: 500;
   border-right: 2px solid $dark-grey;
+}
+
+#buttonControl {
+  display: none;
+}
+#buttonControl:checked + label {
+  .navbar-menu {
+    transform: none;
+  }
+}
+.ul {
+  display: none;
+  outline: 2px solid $dark-grey;
+  // box-shadow: 0 2px 2px 2px $dark-grey;
+}
+.li {
+  // margin-top: 2px;
+  color: $nike-black;
+  font-size: $s-size;
+  text-align: right;
+  padding-right: $xs-size;
+  display: block;
+  line-height: 40px;
+  height: 40px;
+  background-color: $yellow;
+  border-top: 2px solid $dark-grey;
+}
+.li:hover {
+  background-color: darken($yellow, 15%);
 }

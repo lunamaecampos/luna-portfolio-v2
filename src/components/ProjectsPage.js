@@ -5,18 +5,24 @@ import selectProjects from '../selectors/projects';
 
 
 export const ProjectsPage = (props) => (
-  <div>
-  {
-        props.projects.length === 0 ? (
-          <div className="list-item list-item--message">
-            <span>no projects</span>
-          </div>
-        ) : (
-          props.projects.map((project)=>{
-            return <ProjectItem key={project.id} {...project} />;
-          })
-        )
-      }
+  <div className="main-wrapper">
+    <div className="title">Projects</div>
+    <div className="projects-wrapper">
+      <div className="horizontal-scroll-wrapper">
+      {
+          props.projects.length === 0 ? (
+            <div className="list-item list-item--message">
+              <span>no projects</span>
+            </div>
+          ) : (
+            props.projects.map((project)=>{
+              return <ProjectItem key={project.id} {...project} />;
+            })
+          )
+        }
+        <div className="project-item-footer"></div>
+      </div>
+    </div>
   </div>
 );
 

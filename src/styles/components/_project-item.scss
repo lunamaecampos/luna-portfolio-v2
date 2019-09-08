@@ -1,0 +1,132 @@
+.projects-wrapper {
+  overflow: scroll;
+  @media (min-width: $desktop-breakpoint) {
+    direction: rtl;
+    // background-color: yellow;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: rotate(270deg) translateX(-100%);
+    transform-origin: top left;
+    // position:static;
+    width: calc(100vh - 80px);
+    height:100vw;
+  }
+}
+
+.horizontal-scroll-wrapper{
+  @media (min-width: $desktop-breakpoint) {
+    direction: ltr;
+    transform: rotate(90deg) translateY(calc(-100vh + 80px));
+    transform-origin: top left;
+    white-space:nowrap;
+  }
+}
+.project-item {
+  display: block;
+  width: calc(100vw - 25px);
+  min-height: calc(100vh - 60px);
+  background-color: yellow;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid $grey;
+  @media (min-width: $desktop-breakpoint) {
+    vertical-align: top;
+    width:calc(100vw - 99px);
+    height:calc(100vh - 82px);
+    display:inline-block;
+    position:relative;
+    // background-color: red;
+    border: 1px solid $dark-grey;
+    border-top: none;
+    border-bottom: none;
+  }
+}
+.project-item-footer {
+  vertical-align: top;
+  width: 99px;
+  height: calc(100vh -82px);
+  display: inline-block;
+  position: relative;
+}
+.project-column-1 {
+  display: block;
+  margin: auto;
+  // background-color: red;
+  width: 300px;
+  @media (min-width: $desktop-breakpoint) {
+    display: inline-block;
+    width: 50%;
+    height: 90%;
+  }
+}
+.project-column-2 {
+  @extend .project-column-1;
+  vertical-align: top;
+  // background-color: purple;
+}
+
+.project-title {
+  margin-left: $l-size;
+  margin-bottom: $s-size;
+  font-size: 2em;
+  // background-color: orange;
+}
+.project-picture {
+  display: block;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $s-size;
+}
+.project-links {
+  margin-top: $s-size;
+  // background-color: green;
+  height: 60px;
+  @media (min-width: $desktop-breakpoint) {
+    margin-top: $s-size;
+    margin-bottom: $s-size;
+    text-align: center;
+  }
+}
+.project-link {
+  font-size: $font-size-small;
+  background-color: $terminal-black;
+  padding: $xs-size;
+  border: 1px solid $grey;
+  border-radius: 2px;
+  color: $off-white;
+  margin-left: $s-size;
+  @media (min-width: $desktop-breakpoint) {
+    padding: $s-size;
+    margin-right: $s-size;
+    font-size: $font-size-large;
+  }
+  // display: block;
+  // width: auto;
+  // background-color: $terminal-black;
+}
+.project-link:hover {
+  background-color: $dark-grey;
+  transition: .5s;
+}
+.project-description {
+  margin-top: $s-size;
+  margin-left: auto;
+  margin-right: auto;
+  // background-color: green;
+  width: 100%;
+  // height: 100px;
+  white-space: normal;
+  @media (min-width: $desktop-breakpoint) {
+    width: 400px;
+  }
+}
+.project-languages {
+  @extend .project-description;
+}
+.project-languages > span {
+  font-weight: bold;
+}
+.project-github {
+  @extend .project-link
+}

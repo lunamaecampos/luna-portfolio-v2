@@ -1,16 +1,26 @@
 //Colors:
+$yellow: #FFDB72;
+$space-grey: #1C1C1C;
 $dark-grey: #333333;
 $grey: #666;
 $blue: #1C88BF;
 $dark-blue: #364051;
 $off-white: #f7f7f7;
-$terminal-black: #0D0208;
+$terminal-black: #1E1E1F;
+$matrix-green: #40C833;
+$nike-black: #101010;
 //Font Size:
+$font-size-xl: 2.4rem;
 $font-size-large: 1.8rem;
 $font-size-small: 1.4rem;
 //Spacing:
+$xs-size: 0.8rem;
 $s-size: 1.2rem;
 $m-size: 1.6rem;
 $l-size: 3.2rem;
 $xl-size: 4.8rem;
 $desktop-breakpoint: 45rem;
+
+//Font Family:
+$monaco: "Lucida Console", Monaco, monospace;
+$ader: 'futura','나눔고딕',NanumGothic,'Nanum Gothic',arial,Helvetica,AppleGothic,sans-serif;

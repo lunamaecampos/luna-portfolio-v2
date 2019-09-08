@@ -4,7 +4,7 @@ import ProjectListFilters from './ProjectListFilters';
 import ProjectList from './ProjectList';
 
 export const DashboardPage = () => (
-  <div>
+  <div className="dashboard-page">
     <ProjectsSummary />
     <ProjectListFilters />
     <ProjectList />

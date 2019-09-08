@@ -1,42 +1,84 @@
 .main-wrapper {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 60px);
+  // position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content:space-between;
+  justify-content:flex-start;
   overflow: hidden;
+  background-color: $yellow;
+  color: $nike-black;
+  @media (min-width: $desktop-breakpoint) {
+    height: calc(100vh - 80px);
+  }
 }
 .info-card {
-  // background-color: yellow;
-  width: 480px;
+  margin-left: 5em;
+  height: auto;
+  // background-color: green;
+  width: 680px;
+  padding-top: $l-size;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
+  overflow: scroll;
+  @media (min-width: $desktop-breakpoint) {
+    overflow: hidden;
+    height: 500px;
+  }
 }
 .title {
-  width: 480px;
-  color: $off-white;
+  // font-family: nimbus-sans,sans-serif;
+  // text-transform: uppercase;
+  // font-style: italic;
+  background-color: $yellow;
+  height: calc(100vh - 60px);
+  color: $nike-black;
+  width: 24px;
+  text-align: right;
   // background-color: orange;
-  font-size: 2.5em;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: $m-size;
   font-weight: bold;
-  margin-left: auto;
-  margin-right: auto;
+  border-left: 1px solid $dark-grey;
+  padding-bottom: $m-size;
+  position: relative;
+  @media (min-width: $desktop-breakpoint) {
+  height: calc(100vh - 81px);
+  width: 99px;
+  font-size: 4em;
+  text-align: left;
+  padding-top: $l-size;
+  }
 }
 .header1 {
   font-size: 2em;
   font-weight: bold;
 }
 .column {
-  // background: red;
-  width:128px;
-  height: 100%;
-  display: inline-block;
-}
+  width: 300px;
+  text-align: center;
+  background: yellow;
+  display: block;
+  margin: auto;
+  @media (min-width: $desktop-breakpoint) {
+    vertical-align: top;
+    width: 128px;
+    height: 100%;
+    display: inline-block;
+  }
+  }
 .text-column {
-  margin-left: $s-size;
+  // margin-left: $s-size;
   // vertical-align: top;
-  // background: green;
-  height: 100%;
+  background: orange;
+  width: 300px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @media (min-width: $desktop-breakpoint) {
   display: inline-block;
+  width: 450px;
+  }
 }
 .portrait {
   transform: rotate(-20deg);

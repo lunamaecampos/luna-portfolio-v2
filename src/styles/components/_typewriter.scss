@@ -1,0 +1,21 @@
+
+.typewriter::after {
+  content: "_";
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: .30em;
+  animation:
+    blink .7s steps(1) infinite;
+}
+
+/* The typing effect */
+
+
+
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
+  // 0% { opacity: 1};
+  // 100% {opacity: 0}
+}

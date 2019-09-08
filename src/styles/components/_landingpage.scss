@@ -1,22 +1,36 @@
 .landing-wrapper {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 60px);
   background: url('/images/landing-desk.jpg');
   background-size: cover;
+  @media (min-width: $desktop-breakpoint) {
+    height: calc(100vh - 80px);
+  }
+}
+.backdrop-filter {
   display: flex;
   flex-direction: column;
   justify-content:space-between;
   overflow: hidden;
+  backdrop-filter: blur(4px);
+  height: 100%;
 }
 .landing-title {
+  color: $off-white;
   font-weight: bold;
   font-size: 3em;
   text-align: center;
 }
 .landing-subtitle {
-  font-size: $l-size;
+  font-weight: bold;
+  font-family: $monaco;
+  font-size: $font-size-large;
   text-align: center;
+  @media (min-width: $desktop-breakpoint) {
+    font-size: $font-size-xl;
+  }
 }
 .landing-icon-row {
+  margin-top: 1em;
   text-align: center;
 }
 .landing-icon {
@@ -24,13 +38,16 @@
   margin-left: $s-size;
 }
 .title-card {
+  // position: fixed;
   align-self: center;
-  background-color: $terminal-black;
-  width: auto;
+  width: 100%;
   padding: $s-size;
-  margin-left: auto;
-  margin-right: auto;
-  color: #008F11;
-  border: 1px solid $dark-grey;
-  border-radius: 2px;
+  // margin-left: auto;
+  // margin-right: auto;
+  // top: 25%;
+  // background-color: $terminal-black;
+  backdrop-filter: blur(2px);
+  // color: #008F11;
+  // border: 1px solid $dark-grey;
+  // border-radius: 2px;
 }

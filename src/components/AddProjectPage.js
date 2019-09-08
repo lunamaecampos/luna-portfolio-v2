@@ -4,6 +4,7 @@ import ProjectForm from './ProjectForm';
 import { startAddProject } from '../actions/projects';
 
 export class AddProjectPage extends React.Component {
+  // const projectWord = allProjectCount === 1 ? 'project' : 'projects';
   onSubmit=(project) => {
     this.props.startAddProject(project);
     this.props.history.push('/dashboard');
