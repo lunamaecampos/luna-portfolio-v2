@@ -1,11 +1,13 @@
 .tech-card {
   @extend .info-card;
+  background-color: green;
   height: auto;
-  width: 720px;
+  // width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  // background-color: green;
+  background-color: $terminal-black;
+  overflow: scroll;
 }
 .tech-menu {
   height: 400px;
@@ -17,7 +19,7 @@
   margin-left: $s-size;
   text-align: center;
   border: 1px solid $grey;
-  background-color: $terminal-black;
+  // background-color: $terminal-black;
   border-radius: 4px;
 }
 .tech-menu > h2 {
@@ -31,29 +33,65 @@
   line-height: 80px;
 }
 .tech-menu >h4 {
-  font-family: $monaco;
-  color: $matrix-green;
   font-weight: 500;
   // background-color: orange;
   margin-top: $xs-size;
   margin-bottom: 0;
 }
 .tech-related-menu {
-  margin-top: $s-size;
-  margin-left: $s-size;
-  margin-right: $s-size;
-  background-color: $terminal-black;
-  border: 1px solid $grey;
-  border-radius: 4px;
-  height: 180px;
+  @media (min-width: $laptop-breakpoint) {
+    width: 760px;
+    height: auto;
+    margin: auto;
+  }
+  @media (min-width: $desktop-breakpoint) {
+    width: 960px;
+    height: auto;
+    margin: auto;
+  }
 }
-.tech-related-menu > h2 {
+.tech-column {
+  height: auto;
+  width: 280px;
+  vertical-align: top;
+  display: block;
+  @media (min-width: $mobile-breakpoint ) and (max-width: $tablet-breakpoint) {
+    margin: auto;
+    width: 320px;
+  }
+  @media (min-width: $tablet-breakpoint ) and (max-width: $laptop-breakpoint) {
+    margin: auto;
+    width: 480px;
+  }
+  @media (min-width: $laptop-breakpoint) and (max-width: $desktop-breakpoint) {
+    display: inline-block;
+    width: 360px;
+    height: auto;
+  }
+  @media (min-width: $desktop-breakpoint) {
+    display: inline-block;
+    width: 360px;
+    height: auto;
+  }
+}
+.tech-subtitle-header {
   color: $off-white;
-  text-align: center;
+  @media (max-width: $tablet-breakpoint) {
+    font-size: 1.5em;
+  }
 }
 .tech-related-menu ul {
-  font-family: $monaco;
-  color: $matrix-green;
+  border-top: 1px solid darken($off-white, 10%);
+  color: $off-white;
+  font-weight: bold;
+}
+.vertical-list {
+  font-size: 16px;
+}
+.vertical-list::before{
+    content: " \00b7 ";
+    font-size: 1.2em;
+    font-weight: bold;
 }
 .tech-asset-row {
   margin-top: $s-size;

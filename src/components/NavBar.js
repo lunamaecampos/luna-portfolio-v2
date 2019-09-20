@@ -30,10 +30,12 @@ export const NavBar = () => (
     <a href="/" className="corner">Luna Campos</a>
     <input type="checkbox" id="buttonControl" />
     <label for="buttonControl">
-    < NavBarMenu />
-    <img
-      className="navbar-menu-icon"
-      src="../../images/menu.png"/>
+      < NavBarMenu />
+      <div class="hamburger">
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </div>
     </label>
     <a href="/about" className="navbar-item">About</a>
     <a href="/projects" className="navbar-item">Projects</a>

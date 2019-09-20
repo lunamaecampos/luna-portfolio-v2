@@ -1,12 +1,14 @@
 .main-wrapper {
+  // width: 100vw;
   height: calc(100vh - 60px);
+  margin: 0;
   // position: relative;
   display: flex;
   justify-content:flex-start;
   overflow: hidden;
-  background-color: $yellow;
-  color: $nike-black;
-  @media (min-width: $desktop-breakpoint) {
+  background-color: $terminal-black;
+  color: white;
+  @media (min-width: $laptop-breakpoint) {
     height: calc(100vh - 80px);
   }
 }
@@ -19,16 +21,25 @@
   margin-left: auto;
   margin-right: auto;
   overflow: scroll;
+  @media (min-width: $laptop-breakpoint) {
+    width:780px;
+    overflow: visible;
+    // overflow: hidden;
+    // height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+  }
   @media (min-width: $desktop-breakpoint) {
-    overflow: hidden;
-    height: 500px;
+    margin: 0;
+    margin-left: 160px;
   }
 }
 .title {
   // font-family: nimbus-sans,sans-serif;
   // text-transform: uppercase;
   // font-style: italic;
-  background-color: $yellow;
+  background-color: white;
   height: calc(100vh - 60px);
   color: $nike-black;
   width: 24px;
@@ -41,47 +52,78 @@
   border-left: 1px solid $dark-grey;
   padding-bottom: $m-size;
   position: relative;
-  @media (min-width: $desktop-breakpoint) {
+  @media (min-width: $laptop-breakpoint) {
   height: calc(100vh - 81px);
   width: 99px;
   font-size: 4em;
-  text-align: left;
+  // text-align: left;
   padding-top: $l-size;
   }
 }
 .header1 {
-  font-size: 2em;
+  font-size: $font-size-xl;
+  // font-weight: bold;
+}
+.header1 > span {
   font-weight: bold;
 }
 .column {
-  width: 300px;
+  @media (min-width: $laptop-breakpoint) {
+    width: 40%;
+    display: inline-block;
+    // background-color: red;
+  }
+}
+.photo-box {
   text-align: center;
-  background: yellow;
+  background: $off-white;
   display: block;
   margin: auto;
-  @media (min-width: $desktop-breakpoint) {
+  // transform: translate(-20px, -20px);
+  @media (max-width: $mobile-breakpoint) {
+    width: 60%;
+  }
+  @media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+    width: 256px;
+  }
+  @media (min-width: $tablet-breakpoint) and (max-width: $laptop-breakpoint) {
+    width: 256px;
+  }
+  @media (min-width: $laptop-breakpoint) {
     vertical-align: top;
-    width: 128px;
-    height: 100%;
+    width: 100%;
     display: inline-block;
+    // overflow-x: visible;
   }
   }
 .text-column {
+  // z-index: -100;
   // margin-left: $s-size;
   // vertical-align: top;
-  background: orange;
-  width: 300px;
+  // background: orange;
+  width: 80%;
   height: auto;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  @media (min-width: $desktop-breakpoint) {
-  display: inline-block;
-  width: 450px;
+  margin-top: $m-size;
+  @media (min-width: $laptop-breakpoint) {
+    margin-top: 0;
+    height: auto;
+    display: inline-block;
+    width: 50%;
   }
 }
 .portrait {
-  transform: rotate(-20deg);
-  width:128px;
-  border-radius: 50%;
+  // transform: rotate(-10deg);
+  // width:256px;
+  // border-radius: 50%;
+  @media (max-width: $laptop-breakpoint) {
+    transform: translate(20px, 20px);
+    width:100%;
+  }
+  @media (min-width: $laptop-breakpoint) {
+    transform: translate(20px, 20px);
+    width: 100%;
+  }
 }

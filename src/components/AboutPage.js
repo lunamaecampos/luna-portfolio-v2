@@ -6,12 +6,14 @@ export const AboutPage = () => (
     <div className="title">About Me</div>
     <div className="info-card">
       <div className="column">
-        <img
-        className="portrait"
-        src="../../images/selfie.jpeg" />
+        <div className="photo-box">
+          <img
+          className="portrait"
+          src="../../images/selfie2.jpg" />
+        </div>
       </div>
       <div className="text-column">
-        <div className="header1">Hi, my name is Luna! </div>
+        <div className="header1">Hi, my name is <span>Luna Campos</span>.</div>
         <p>I'm a hard-working person who likes to call herself a Full-Stack Software Engineer.</p>
         <p>I've been actively coding for 3+ years. I enrolled in
           Computer Science classes to learn the fundamentals and data structures.

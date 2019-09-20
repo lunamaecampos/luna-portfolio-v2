@@ -5,63 +5,68 @@ export const TechPage = () => (
   <div className="main-wrapper">
     <div className="title">Technologies</div>
     <div className="tech-card">
-      <div className="tech-menu">
-        <h2 className="single-line-h2">Languages</h2>
-        <h4>Javascript</h4>
-        <h4>Python</h4>
-        <h4>C++</h4>
-        <h4>Swift</h4>
-        <h4>HTML5/CSS3</h4>
-      </div>
-      <div className="tech-menu">
-        <h2>Framework & Libraries</h2>
-        <h4>React.js</h4>
-        <h4>Redux</h4>
-        <h4>AngularJS</h4>
-        <h4>Express</h4>
-        <h4>Node.js</h4>
-        <h4>Django</h4>
-        <h4>Flask</h4>
-        <h4>jQuery</h4>
-        <h4>Bootstrap</h4>
-      </div>
-      <div className="tech-menu">
-        <h2>Database & Storage</h2>
-        <h4>MySQL</h4>
-        <h4>SQLite</h4>
-        <h4>MongoDB</h4>
-        <h4>Firebase Realtime Database</h4>
-        <h4>Firebase Storage</h4>
-        <h4>Amazon S3</h4>
-      </div>
-      <div className="tech-asset-row">
-        <img className="tech-asset" src="images/assets/js.png" />
-        <img className="tech-asset" src="images/assets/python.png" />
-        <img className="tech-asset" src="images/assets/cpp.png" />
-        <img className="tech-asset" src="images/assets/swift.png" />
-        <img className="tech-asset" src="images/assets/html5.png" />
-        <img className="tech-asset" src="images/assets/css3.png" />
-        <img className="tech-asset" src="images/assets/react.png" />
-        <img className="tech-asset" src="images/assets/node.png" />
-        <img className="tech-asset" src="images/assets/django.png" />
-        <img className="tech-asset" src="images/assets/jquery.png" />
-        <img className="tech-asset" src="images/assets/bootstrap.png" />
-        <img className="tech-asset" src="images/assets/github.png" />
-        <img className="tech-asset" src="images/assets/aws.png" />
-        <img className="tech-asset" src="images/assets/firebase.png" />
+      <div className="tech-related-menu">
+        <div className="tech-column">
+          <h1 className="tech-subtitle-header">Languages</h1>
+        </div>
+        <div className="tech-column">
+          <ul>
+            <li>Javascript</li>
+            <li>Python</li>
+            <li>C++</li>
+            <li>Swift</li>
+            <li>HTML5/CSS3</li>
+          </ul>
+        </div>
       </div>
       <div className="tech-related-menu">
-        <h2>Related Technical Skills</h2>
-        <ul>
-          <li>Git/Github Version Control</li>
-          <li>Command Line Interface</li>
-          <li>AWS Deployment</li>
-          <li>Heroku Deployment</li>
-          <li>Sassy CSS</li>
-          <li>JSX Syntax</li>
-          <li>Responsive Web Design</li>
-          <li>Test Driven Development with Jest & Enzyme</li>
-        </ul>
+        <div className="tech-column">
+          <h1 className="tech-subtitle-header">Frameworks & Libraries</h1>
+        </div>
+        <div className="tech-column">
+          <ul>
+          <li>React.js with Redux</li>
+          <li>Angular.js</li>
+          <li>Express.js</li>
+          <li>Node.js</li>
+          <li>Django</li>
+          <li>Flask</li>
+          <li>jQuery</li>
+          <li>Bootstrap</li>
+          </ul>
+        </div>
+      </div>
+      <div className="tech-related-menu">
+        <div className="tech-column">
+          <h1 className="tech-subtitle-header">Databases & Storage</h1>
+        </div>
+        <div className="tech-column">
+          <ul>
+            <li>MySQL</li>
+            <li>SQLite</li>
+            <li>MongoDB</li>
+            <li>Firebase Realtime Database</li>
+            <li>Firebase Storage</li>
+            <li>Amazon S3</li>
+          </ul>
+        </div>
+      </div>
+      <div className="tech-related-menu">
+        <div className="tech-column">
+          <h1 className="tech-subtitle-header">Related Technical Skills</h1>
+        </div>
+        <div className="tech-column">
+          <ul>
+            <li>Git/Github Version Control</li>
+            <li>Command Line Interface</li>
+            <li>AWS Deployment</li>
+            <li>Heroku Deployment</li>
+            <li>Sassy CSS</li>
+            <li>JSX Syntax</li>
+            <li>Responsive Web Design</li>
+            <li>Test Driven Development with Jest & Enzyme</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

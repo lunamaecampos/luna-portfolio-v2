@@ -6,7 +6,7 @@ export const LandingPage = () => (
       <div className="backdrop-filter">
         <div></div>
           <div className="title-card">
-          <div className="landing-title">Luna Campos</div>
+          <div className="landing-title">My name is Luna Campos</div>
           <TypeWriter
             dataText={[
               'Full-Stack Web Developer',

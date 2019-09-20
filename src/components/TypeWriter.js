@@ -15,7 +15,7 @@ class TypeWriter extends React.Component {
     const {loopNum, text} = this.state;
     const i = loopNum % dataText.length;
     const fullText = dataText[i];
-    let index = this.state.index;
+    let { index } = this.state;
     let word = fullText.slice(0, index);
 
     this.setState({text: word, index:++index});
@@ -50,7 +50,7 @@ class SearchWriter extends React.Component {
     const {loopNum, text} = this.state;
     const i = loopNum % dataText.length;
     const fullText = dataText[i];
-    let index = this.state.index;
+    let { index } = this.state;
     let word = fullText.slice(0, index);
 
     this.setState({text: word, index:++index});

@@ -13,14 +13,17 @@ $nike-black: #101010;
 $font-size-xl: 2.4rem;
 $font-size-large: 1.8rem;
 $font-size-small: 1.4rem;
+$font-size-xs: 1rem;
 //Spacing:
 $xs-size: 0.8rem;
 $s-size: 1.2rem;
 $m-size: 1.6rem;
 $l-size: 3.2rem;
 $xl-size: 4.8rem;
-$desktop-breakpoint: 45rem;
-
+$mobile-breakpoint: 22rem; //352px
+$tablet-breakpoint: 40rem; //640px
+$laptop-breakpoint: 56rem; //896px
+$desktop-breakpoint: 75rem; //1200px
 //Font Family:
 $monaco: "Lucida Console", Monaco, monospace;
 $ader: 'futura','나눔고딕',NanumGothic,'Nanum Gothic',arial,Helvetica,AppleGothic,sans-serif;
