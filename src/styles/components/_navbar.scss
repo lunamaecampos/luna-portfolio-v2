@@ -99,19 +99,22 @@
     display: none;
   }
 }
-.navbar-menu-icon {
-  @media (min-width: $laptop-breakpoint) {
-    display: none;
-  }
-  width: 60px;
-  display: inline-block;
-  padding: $s-size;
-  border-right: 2px solid $dark-grey;
-}
+// .navbar-menu-icon {
+//   @media (min-width: $laptop-breakpoint) {
+//     display: none;
+//   }
+//   width: 60px;
+//   display: inline-block;
+//   padding: $s-size;
+//   border-right: 2px solid $dark-grey;
+// }
 .hamburger {
   // background-color: red;
   margin-left: 10px;
   // align-self: flex-end;
+  @media (min-width: $laptop-breakpoint) {
+    display: none;
+  }
 }
 .icon-bar {
   display: block;
