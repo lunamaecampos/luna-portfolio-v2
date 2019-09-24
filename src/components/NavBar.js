@@ -1,7 +1,10 @@
 import React from 'react';
 import {BrowserRouter, Route, Link, Router } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { SearchWriter } from './Typewriter'
+import SearchWriter from './SearchWriter';
+import { setTextFilter } from '../actions/filters';
+import ProjectsPage from './ProjectsPage';
+// import selectProjects from '../selectors/projects';
 // import { history } from '../routers/AppRouter';
 
 const DropDown = () => (
@@ -40,75 +43,38 @@ export default class NavBar extends React.Component {
 
   render(){
     return (
-        <div className="navbar">
-          <Link to="/" className="corner">Luna Campos</Link>
-          <input type="checkbox" id="buttonControl" checked={this.state.checkbox} />
-          <label for="buttonControl">
-            < NavBarMenu />
-            <div className="hamburger" onClick={this.handleClick}>
-              <span className="icon-bar top-bar"></span>
-              <span className="icon-bar middle-bar"></span>
-              <span className="icon-bar bottom-bar"></span>
-            </div>
-          </label>
-          <Link to="/about" className="navbar-item">About</Link>
-          <Link to="/projects" className="navbar-item">Projects</Link>
-          <Link to="/technologies" className="navbar-item">Tech</Link>
-          <a className="navbar-item">Connect
-          <DropDown />
-          </a>
-          <img
-            className="search-icon"
-            src="../../images/search.png" />
-          <SearchWriter
-            dataText={[
-              'Search projects',
-              'React',
-              'Python',
-              'Javascript'
-            ]}
-            />
+        <div>
+          <div className="navbar">
+            <Link to="/" className="corner">Luna Campos</Link>
+            <input type="checkbox" id="buttonControl" checked={this.state.checkbox} />
+            <label for="buttonControl">
+              < NavBarMenu />
+              <div className="hamburger" onClick={this.handleClick}>
+                <span className="icon-bar top-bar"></span>
+                <span className="icon-bar middle-bar"></span>
+                <span className="icon-bar bottom-bar"></span>
+              </div>
+            </label>
+            <Link to="/about" className="navbar-item">About</Link>
+            <Link to="/projects" className="navbar-item">Projects</Link>
+            <Link to="/technologies" className="navbar-item">Tech</Link>
+            <a className="navbar-item">Connect
+            <DropDown />
+            </a>
+            <img
+              className="search-icon"
+              src="../../images/search.png" />
+            <SearchWriter
+              dataText={[
+                'Search projects',
+                'React',
+                'Python',
+                'Javascript'
+              ]}
+              />
+          </div>
+
         </div>
     )
   }
 }
-
-// export const NavBar = () => (
-//   <div className="navbar">
-//     <Link to="/" className="corner">Luna Campos</Link>
-//     <input type="checkbox" id="buttonControl" />
-//     <label for="buttonControl">
-//       < NavBarMenu />
-//       <div className="hamburger">
-//         <span className="icon-bar top-bar"></span>
-//         <span className="icon-bar middle-bar"></span>
-//         <span className="icon-bar bottom-bar"></span>
-//       </div>
-//     </label>
-//     <Link to="/about" className="navbar-item">About</Link>
-//     <Link to="/projects" className="navbar-item">Projects</Link>
-//     <Link to="/technologies" className="navbar-item">Tech</Link>
-//     <a className="navbar-item">Connect
-//     <DropDown />
-//     </a>
-//     <img
-//       className="search-icon"
-//       src="../../images/search.png" />
-//     <SearchWriter
-//       dataText={[
-//         'Search projects',
-//         'React',
-//         'Python',
-//         'Javascript'
-//       ]}
-//       />
-//   </div>
-// );
-
-// <input
-//   type="text"
-//   className="searchbar"
-//   placeholder="Search projects"
-//   />
-
-// export default NavBar;
