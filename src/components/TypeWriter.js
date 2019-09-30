@@ -20,7 +20,7 @@ class TypeWriter extends React.Component {
     const fullText = dataText[i];
     let { index } = this.state;
     let word = fullText.slice(0, index);
-    let textColor = ['#97C379', '#9662AA', '#AE4B44'];
+    let textColor = ['#97C379', '#E5C07B', '#AE4B44', '#9662AA', '#60AFEF'];
 
     this.setState({text: word, index:++index, textColor: textColor[i]});
     if(word.length === fullText.length) {

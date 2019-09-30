@@ -29,8 +29,10 @@ export default class LandingPage extends React.Component {
               <TypeWriter
                 dataText={[
                   'Full-Stack Web Developer',
-                  'Problem-Solver',
-                  'Engineer'
+                  'Engineer',
+                  'Critical Thinker',
+                  'Team Player',
+                  'Quick Learner'
                 ]}
               />
               <div className="landing-icon-row">

@@ -6,7 +6,11 @@
   display: flex;
   justify-content:flex-start;
   overflow: hidden;
-  background-color: $terminal-black;
+  background-image:
+    radial-gradient(
+      circle farthest-side,
+      $nike-black, lighten($nike-black, 5%)
+    );
   color: white;
   @media (min-width: $laptop-breakpoint) {
     height: calc(100vh - 80px);
@@ -83,7 +87,11 @@
   }
 }
 .photo-box {
-  background: $atom-teal;
+  background-image:
+    linear-gradient(
+      to top right,
+      red, #f06d06
+    );
   display: block;
   // margin: auto;
   opacity: 0;
@@ -110,7 +118,11 @@
 }
 .photo-box-two {
   text-align: center;
-  background: $atom-yellow;
+  background-image:
+    linear-gradient(
+      to top right,
+      $atom-lime, lime
+    );
   display: block;
   opacity: 0;
   transform: translate(-30px, -30px);

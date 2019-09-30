@@ -4,8 +4,8 @@
   // width: 100vw;
   // overflow: hidden;
   // position: absolute;
-  // background: url('/images/landing-desk.jpg');
-  // background-size: cover;
+  background: url('/images/landing-desk.jpg');
+  background-size: cover;
   @media (min-width: $laptop-breakpoint) {
     height: calc(100vh - 80px);
   }
@@ -15,15 +15,15 @@
   flex-direction: column;
   justify-content:space-between;
   overflow: hidden;
-  // backdrop-filter: blur(4px);
-  // backdrop-filter: grayscale(20%);
+  backdrop-filter: blur(4px);
   height: 100%;
 }
 .landing-title {
   position: relative;
   opacity: 0;
   // left: -10px;
-  color: $atom-yellow;
+  // color: lighten($atom-yellow, 2%);
+  color: $atom-orange;
   font-weight: bold;
   font-size: $font-size-xs;
   text-align: left;
