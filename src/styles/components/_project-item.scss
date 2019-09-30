@@ -74,8 +74,7 @@
     display:inline-block;
     position:relative;
     // background-color: red;
-    border: 1px solid $dark-grey;
-    border-top: none;
+    border-right: 1px solid $dark-grey;
     border-bottom: none;
   }
   @media (min-width: $laptop-breakpoint) {
@@ -87,9 +86,7 @@
     display:inline-block;
     position:relative;
     // background-color: red;
-    border: 1px solid $dark-grey;
-    border-top: none;
-    border-bottom: none;
+    border-right: 1px solid $dark-grey;
   }
 }
 .project-item-footer {
@@ -144,6 +141,9 @@
   margin-bottom: $s-size;
   font-size: 2em;
   // background-color: orange;
+  opacity: 0;
+  animation: 1s ease-out 0.2s 1 nameSlideIn;
+  animation-fill-mode: forwards;
   @media (max-width: $laptop-breakpoint) {
     margin-top: $xs-size;
     font-size: $font-size-xl;
@@ -158,6 +158,10 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: $s-size;
+  opacity: 0;
+  animation: 1s ease-out 0.5s 1 projectPicSlideUp;
+  animation-fill-mode: forwards;
+  color: $nike-black;
   @media(min-width: $tablet-breakpoint) {
     width: 90%;
   }
@@ -190,6 +194,9 @@
   border-radius: 2px;
   color: $off-white;
   margin-left: $s-size;
+  opacity: 0;
+  animation: 1s ease-out 1s 1 subtitleSlideDown;
+  animation-fill-mode: forwards;
   @media (min-width: $laptop-breakpoint) {
     padding: $s-size;
     margin-right: $s-size;
@@ -210,7 +217,10 @@
   // background-color: blue;
   // width: 100%;
   // height: 100px;
+  opacity: 0;
   white-space: normal;
+  animation: 1s ease-out 0.5s 1 textSlideLeft;
+  animation-fill-mode: forwards;
   @media (max-width: $tablet-breakpoint) {
     margin: auto;
     width: 90%;
@@ -231,6 +241,9 @@
   // }
 }
 .project-languages {
+  opacity: 0;
+  animation: 1s ease-out 1s 1 textSlideLeft;
+  animation-fill-mode: forwards;
   @extend .project-description;
   // background: green;
 }
@@ -239,4 +252,14 @@
 }
 .project-github {
   @extend .project-link
+}
+.noProjects {
+  font-family: $nike-font;
+  font-weight: bold;
+  font-size: $font-size-xl;
+  margin-top: $m-size;
+  margin-left: $m-size;
+  @media (min-width: $tablet-breakpoint) and (max-width: $laptop-breakpoint){
+    margin-bottom: 260px;
+  }
 }

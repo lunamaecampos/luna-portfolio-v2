@@ -8,9 +8,11 @@ export const PublicRoute = ({
   ...rest
 }) => (
   <Route {...rest} component={() => (
-      <div>
-      <NavBar />
-      <Component />
+      <div className="app-wrapper">
+        <div className="app-backdrop-filter">
+          <NavBar />
+          <Component />
+        </div>
       </div>
   )}/>
 );

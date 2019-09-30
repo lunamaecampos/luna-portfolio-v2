@@ -19,14 +19,14 @@ export default class TechPage extends React.Component {
         {!this.state.doneLoading ?
           (<LoadingPage />) :
           (<div className="main-wrapper">
-            <div className="title">Technologies</div>
+            <div className="title">Technologies & Skills</div>
             <div className="tech-card">
               <div className="tech-related-menu">
                 <div className="tech-column">
-                  <h1 className="tech-subtitle-header">Languages</h1>
+                  <h1 className="tech-subtitle-header-1">Programming Languages</h1>
                 </div>
                 <div className="tech-column">
-                  <ul>
+                  <ul className="ul-1">
                     <li>Javascript</li>
                     <li>Python</li>
                     <li>C++</li>
@@ -37,10 +37,10 @@ export default class TechPage extends React.Component {
               </div>
               <div className="tech-related-menu">
                 <div className="tech-column">
-                  <h1 className="tech-subtitle-header">Frameworks & Libraries</h1>
+                  <h1 className="tech-subtitle-header-2">Frameworks & Libraries</h1>
                 </div>
                 <div className="tech-column">
-                  <ul>
+                  <ul className="ul-2">
                   <li>React.js with Redux</li>
                   <li>Angular.js</li>
                   <li>Express.js</li>
@@ -54,10 +54,10 @@ export default class TechPage extends React.Component {
               </div>
               <div className="tech-related-menu">
                 <div className="tech-column">
-                  <h1 className="tech-subtitle-header">Databases & Storage</h1>
+                  <h1 className="tech-subtitle-header-3">Databases & Storage</h1>
                 </div>
                 <div className="tech-column">
-                  <ul>
+                  <ul className="ul-3">
                     <li>MySQL</li>
                     <li>SQLite</li>
                     <li>MongoDB</li>
@@ -69,10 +69,10 @@ export default class TechPage extends React.Component {
               </div>
               <div className="tech-related-menu">
                 <div className="tech-column">
-                  <h1 className="tech-subtitle-header">Related Technical Skills</h1>
+                  <h1 className="tech-subtitle-header-4">Related Technical Skills</h1>
                 </div>
                 <div className="tech-column">
-                  <ul>
+                  <ul className="ul-4">
                     <li>Git/Github Version Control</li>
                     <li>Command Line Interface</li>
                     <li>AWS Deployment</li>

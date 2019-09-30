@@ -1,32 +1,37 @@
 .navbar {
   height: 60px;
   display: flex;
-  border-bottom: 2px solid $dark-grey;
-  background-color: none;
-  color: $nike-black;
+  background-color: $nike-black;
+  // color: $grey;
   position:  relative;
   z-index: 100;
+  // font-family: $nike-font;
+  // font-weight: bold;
   @media (min-width: $laptop-breakpoint) {
     height: 80px;
   }
 }
 .navbar > a {
-  color: $nike-black;
+  color: $off-white;
 }
 .navbar > a:hover {
-  background-color: darken($yellow, 15%);
-  transition: .5s;
+  background-color: lighten($nike-black, 5%);
+  transition: .1s;
+  // border-bottom: 2px solid $nike-black;
 }
 .navbar-item {
+  color: $off-white;
   line-height: 60px;
     display: none;
     @media (min-width: $laptop-breakpoint) {
+    font-size: $font-size-large;
+    // background-color: red;
     align-items: center;
-    font-weight: 500;
+    font-weight: 550;
     line-height: 80px;
     flex-grow: 1;
     display: inline;
-    border-right: 2px solid $dark-grey;
+    // border-right: 2px solid $dark-grey;
     text-align: center;
   }
 }
@@ -37,10 +42,13 @@
   font-size: $font-size-large;
   color: $nike-black;
   padding-left: $xl-size;
+  font-weight: bold;
 }
 .navbar-menu-item:hover {
-  transition: .3s;
-  color: red;
+  transition: .2s;
+  color: darken($nike-black, 20%);
+  transform: translateX(5px);
+  background-color: darken($off-white, 5%);
 }
 
 .navbar-item:hover{
@@ -70,7 +78,7 @@
 }
 .searchbar:focus {
   outline: none;
-  color: $nike-black;
+  color: $off-white;
 }
 .corner {
   display: none;
@@ -79,8 +87,8 @@
     display: inline-block;
     padding: $s-size;
     font-size: $font-size-large;
-    font-weight: 500;
-    border-right: 2px solid $dark-grey;
+    font-weight: 600;
+    // border-right: 2px solid $dark-grey;
   }
 }
 .navbar-menu {
@@ -88,12 +96,12 @@
   transform: translate(-100%, 0);
   transition: transform 1s cubic-bezier(0.77,0.2,0.05,1.0);
 
-  background-color: white;
-  padding-top: 60px;
+  background-color: $off-white;
+  padding-top: 20px;
   margin-top: 60px;
   height: calc(100vh - 60px);
   width: 100vw;
-  border-right: 2px solid $dark-grey;
+  // border-right: 2px solid $dark-grey;
   position: absolute;
   @media (min-width: $laptop-breakpoint) {
     display: none;
@@ -120,7 +128,7 @@
   display: block;
   width: 36px;
   height: 4px;
-  background-color: $nike-black;
+  background-color: $off-white;
   margin: 4px;
   margin-top: 6px;
   transition: all 0.2s;
@@ -152,21 +160,21 @@
 }
 .ul {
   display: none;
-  outline: 2px solid $dark-grey;
+  // outline: 2px solid $dark-grey;
   // box-shadow: 0 2px 2px 2px $dark-grey;
 }
 .li {
   // margin-top: 2px;
-  color: $nike-black;
+  color: $off-white;
   font-size: $s-size;
   text-align: right;
   padding-right: $xs-size;
   display: block;
   line-height: 40px;
   height: 40px;
-  background-color: $yellow;
-  border-top: 2px solid $dark-grey;
+  background-color: $nike-black;
+  // border-top: 2px solid $dark-grey;
 }
 .li:hover {
-  background-color: darken($yellow, 15%);
+  background-color: lighten($nike-black, 5%);
 }

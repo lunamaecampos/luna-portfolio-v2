@@ -25,7 +25,7 @@ export default class LandingPage extends React.Component {
           <div className="backdrop-filter">
             <div></div>
               <div className="title-card">
-              <div className="landing-title">My name is Luna Campos</div>
+              <div className="landing-title">My Name Is <span>Luna Campos</span></div>
               <TypeWriter
                 dataText={[
                   'Full-Stack Web Developer',
@@ -34,16 +34,20 @@ export default class LandingPage extends React.Component {
                 ]}
               />
               <div className="landing-icon-row">
-                <a href="/"><img
+                <a target="_blank"
+                  href="https://github.com/lunamaecampos"><img
                   className="landing-icon"
                   src="../../images/github2.png" /></a>
-                <a href="/"><img
+                <a target="_blank"
+                  href="https://www.linkedin.com/in/luna-campos-a8721213b/"><img
                   className="landing-icon"
                   src="../../images/linkedin2.png" /></a>
-                <a href="/"><img
+                <a target="_blank"
+                  href="mailto:lunamaecampos@gmail.com?subject=I was checking out your Portfolio site"><img
                   className="landing-icon"
                   src="../../images/mail2.png" /></a>
-                <a href="/"><img
+                <a target="_blank"
+                  href="/"><img
                   className="landing-icon"
                   src="../../images/resume2.png" /></a>
                 </div>

@@ -7,7 +7,7 @@ export const ProjectItem = ({ title, liveLink, githubLink, description, language
           <div className="project-title">{title}</div>
           <div className="project-column-1">
             <img
-            className="project-picture" src={pictureUrl} />
+            className="project-picture" src={pictureUrl} alt="Project Pic" />
             <div className="project-links">
               <a className="project-link"
               href={liveLink}>View Live Project</a>

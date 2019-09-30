@@ -6,7 +6,8 @@ class TypeWriter extends React.Component {
   state = {
     text: '',
     loopNum: 0,
-    index: 0
+    index: 0,
+    textColor: ''
   }
   componentDidMount() {
     setTimeout(this.handleType, 1000);
@@ -19,8 +20,9 @@ class TypeWriter extends React.Component {
     const fullText = dataText[i];
     let { index } = this.state;
     let word = fullText.slice(0, index);
+    let textColor = ['#97C379', '#9662AA', '#AE4B44'];
 
-    this.setState({text: word, index:++index});
+    this.setState({text: word, index:++index, textColor: textColor[i]});
     if(word.length === fullText.length) {
       this.setState({loopNum: loopNum+1, index:0});
       setTimeout(this.handleType, 3000);
@@ -31,7 +33,7 @@ class TypeWriter extends React.Component {
   render() {
     return (
       <div className="landing-subtitle typewriter">
-        { this.state.text }
+        and I Am a{!this.state.text.slice(0,1).match(/[aeiou]/gi) || 'n'} <span style={{color:this.state.textColor}}>{ this.state.text }</span>
       </div>
     );
   }

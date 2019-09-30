@@ -29,8 +29,11 @@ class ProjectsPage extends React.Component {
             <div className="horizontal-scroll-wrapper">
             {
                 this.props.projects.length === 0 ? (
-                  <div className="list-item list-item--message">
-                    <span>no projects</span>
+                  <div className="project-item">
+                    <div className="noProjects">
+                      No Projects found {!this.props.filters.text ||
+                       `matching "${this.props.filters.text}"`}
+                    </div>
                   </div>
                 ) : (
                   this.props.projects.map((project)=>{
@@ -52,7 +55,8 @@ class ProjectsPage extends React.Component {
 const mapStateToProps = (state) => {
   console.log(state);
   return {
-    projects: selectProjects(state.projects, state.filters)
+    projects: selectProjects(state.projects, state.filters),
+    filters: state.filters
   };
 };
 

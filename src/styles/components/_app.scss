@@ -1,0 +1,10 @@
+.app-wrapper {
+  background: url('/images/landing-desk.jpg');
+  background-size: cover;
+}
+.app-backdrop-filter {
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    // backdrop-filter: grayscale(20%);
+    height: 100%;
+}

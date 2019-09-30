@@ -24,9 +24,11 @@ export default class AboutPage extends React.Component{
               <div className="info-card">
                 <div className="column">
                   <div className="photo-box">
-                    <img
-                    className="portrait"
-                    src="../../images/selfie2.jpg" />
+                    <div className="photo-box-two">
+                      <img
+                      className="portrait"
+                      src="../../images/selfie2.jpg" />
+                    </div>
                   </div>
                 </div>
                 <div className="text-column">

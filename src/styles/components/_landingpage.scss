@@ -4,9 +4,9 @@
   // width: 100vw;
   // overflow: hidden;
   // position: absolute;
-  background: url('/images/landing-desk.jpg');
-  background-size: cover;
-  @media (min-width: $tablet-breakpoint) {
+  // background: url('/images/landing-desk.jpg');
+  // background-size: cover;
+  @media (min-width: $laptop-breakpoint) {
     height: calc(100vh - 80px);
   }
 }
@@ -15,36 +15,92 @@
   flex-direction: column;
   justify-content:space-between;
   overflow: hidden;
-  backdrop-filter: blur(4px);
+  // backdrop-filter: blur(4px);
   // backdrop-filter: grayscale(20%);
   height: 100%;
 }
 .landing-title {
-  color: $off-white;
+  position: relative;
+  opacity: 0;
+  // left: -10px;
+  color: $atom-yellow;
   font-weight: bold;
-  font-size: 3em;
-  text-align: center;
+  font-size: $font-size-xs;
+  text-align: left;
+  font-family: $nike-font;
+  animation: 1s ease-out 0.2s 1 nameSlideIn;
+  animation-fill-mode: forwards;
+  @media (min-width: $mobile-breakpoint) {
+    font-size: $s-size;
+  }
+  @media (min-width: $tablet-breakpoint) {
+  font-size: 1.25em;
+  }
+  @media (min-width: $laptop-breakpoint) {
+    font-size: 2em;
+  }
+}
+.landing-title > span {
+    font-size: 2.75em;
+    color: $atom-teal;
+  @media (min-width: $desktop-breakpoint) {
+    margin-right: 1em;
+  }
 }
 .landing-subtitle {
   font-weight: bold;
-  // font-family: $monaco;
-  font-size: $font-size-large;
-  text-align: center;
-  @media (min-width: $tablet-breakpoint) {
-    font-size: $font-size-xl;
+  font-family: $nike-font;
+  font-size: $xs-size;
+  text-align: left;
+  margin-left: $xs-size;
+  opacity: 0;
+  animation: 1.2s ease-out 0.2s 1 subtitleSlideDown;
+  animation-fill-mode: forwards;
+  @media (min-width: $mobile-breakpoint) {
+    font-size: 0.9rem;
   }
+  @media (min-width: $tablet-breakpoint) {
+    margin-left: 1em;
+    font-size: 1em;
+  }
+  @media (min-width: $laptop-breakpoint) {
+    margin-left: 1.5em;
+    font-size: 1.5em;
+  }
+}
+.landing-subtitle > span {
+  font-size: 2em;
 }
 .landing-icon-row {
   margin-top: 1em;
   text-align: center;
 }
 .landing-icon {
-  height: 56px;
+  position: relative;
+  opacity: 0;
+  animation: 2s ease-out 1s 1 iconSlideUp;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  height: 48px;
   margin-left: $s-size;
+  @media (min-width: $tablet-breakpoint) {
+    height: 56px;
+  }
+  @media (min-width: $laptop-breakpoint) {
+    height: 64px;
+  }
+  @media (min-width: $desktop-breakpoint) {
+    height: 72px;
+  }
 }
 .title-card {
   align-self: center;
   width: 100%;
+  // background-color: orange;
   padding: $s-size;
+  @media (min-width: $desktop-breakpoint) {
+    width: auto;
+    margin-right: 18%;
+  }
   // backdrop-filter: blur(2px);
 }

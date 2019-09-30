@@ -1,9 +1,12 @@
 .loader {
   align-items: center;
   display: flex;
-  height: 100vh;
+  height: calc(100vh - 60px);
   justify-content: center;
   width: 100vw;
+  @media(min-width: $laptop-breakpoint) {
+    height: calc(100vh - 80px)
+  }
 }
 
 .loader__image {
