@@ -26,20 +26,22 @@ export class EditProjectPage extends React.Component {
   render() {
     return (
       <div>
-        <div className="page-header">
+        <div className="page-header-form">
           <div className="content-container">
             <h1 className="page-header__title">Edit Project</h1>
           </div>
         </div>
-        <div className="content-container">
+        <div className="form-container">
           <ProjectForm
             project={this.props.project}
             onSubmit={this.onSubmit}
           />
-          <button
-            className="button button--secondary"
-            onClick={this.openModal}
-          >Remove Project</button>
+          <div className="form">
+            <button
+              className="button button--secondary"
+              onClick={this.openModal}
+            >Remove Project</button>
+          </div>
         </div>
         <ConfirmationModal
         modalisOpen={this.state.modalisOpen}

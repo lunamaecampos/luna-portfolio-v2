@@ -77,6 +77,7 @@ export default class TechPage extends React.Component {
                     <li>Command Line Interface</li>
                     <li>AWS Deployment</li>
                     <li>Heroku Deployment</li>
+                    <li>Firebase Deployment</li>
                     <li>Sassy CSS</li>
                     <li>JSX Syntax</li>
                     <li>Responsive Web Design</li>
@@ -84,6 +85,23 @@ export default class TechPage extends React.Component {
                   </ul>
                 </div>
               </div>
+              <div className="tech-related-menu">
+                <div className="tech-column">
+                  <h1 className="tech-subtitle-header-5">Soft Skills</h1>
+                </div>
+                <div className="tech-column">
+                  <ul className="ul-5">
+                    <li>Leadership</li>
+                    <li>Teamwork</li>
+                    <li>Communication</li>
+                    <li>Problem-Solving</li>
+                    <li>Strong Work Ethic</li>
+                    <li>Interpersonal Skills</li>
+                    <li>Flexibility/Adaptability</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="tech-footer"></div>
             </div>
           </div>
       )}

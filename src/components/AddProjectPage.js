@@ -12,12 +12,12 @@ export class AddProjectPage extends React.Component {
   render() {
     return (
       <div>
-        <div className="page-header">
+        <div className="page-header-form">
           <div className="content-container">
             <h1 className="page-header__title">Add Project</h1>
           </div>
         </div>
-        <div className="content-container">
+        <div className="form-container">
           <ProjectForm
             onSubmit={this.onSubmit}
           />

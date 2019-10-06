@@ -175,7 +175,12 @@
   line-height: 40px;
   height: 40px;
   background-color: $nike-black;
-  // border-top: 2px solid $dark-grey;
+  // border-bottom: 1px solid $space-grey;
+  border-left: 1px solid $space-grey;
+  border-right: 1px solid $space-grey;
+}
+.li:last-of-type {
+  border-bottom: 1px solid $space-grey;
 }
 .li:hover {
   background-color: lighten($nike-black, 5%);

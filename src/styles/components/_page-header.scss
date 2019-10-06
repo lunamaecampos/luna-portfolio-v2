@@ -14,3 +14,7 @@
     font-weight: bold;
   }
 }
+.page-header-form {
+  @extend .page-header;
+  margin-bottom: 0;
+}

@@ -2,6 +2,8 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
+const postcss = require('postcss');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
  if (process.env.NODE_ENV === 'test') {
@@ -15,6 +17,7 @@ module.exports = (env) => {
   const isProduction = env === 'production';
   const CSSExtract = new ExtractTextPlugin('styles.css')
   console.log('env', env);
+
   return {
     entry: ['babel-polyfill', './src/app.js'],
     output: {
@@ -55,7 +58,13 @@ module.exports = (env) => {
         'process.env.FIREBASE_PROJECT_ID': JSON.stringify(process.env.FIREBASE_PROJECT_ID),
         'process.env.FIREBASE_STORAGE_BUCKET': JSON.stringify(process.env.FIREBASE_STORAGE_BUCKET),
         'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID)
-
+      }),
+      new webpack.LoaderOptionsPlugin({
+        options: {
+          postcss: [
+            autoprefixer()
+          ]
+        }
       })
     ],
     devtool: isProduction ? 'source-map' : 'inline-source-map',

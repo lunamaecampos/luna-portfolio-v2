@@ -9,15 +9,18 @@ export const ProjectItem = ({ title, liveLink, githubLink, description, language
             <img
             className="project-picture" src={pictureUrl} alt="Project Pic" />
             <div className="project-links">
-              <a className="project-link"
-              href={liveLink}>View Live Project</a>
+              {liveLink ?
+                (<a className="project-link" target="_blank" href={liveLink}>View Live Project</a>) :
+                (<div className="project-link">No Live Project</div>)
+              }
               <a className="project-github"
+              target="_blank"
               href={githubLink}>View Github Repo</a>
             </div>
           </div>
           <div className="project-column-2">
             <div className="project-description">{description}</div>
-            <div className="project-languages"><span className="">Technologies used:</span> {languages}</div>
+            <div className="project-languages"><span className="">Technologies used:</span> <span className="languages-list">{languages}</span></div>
           </div>
         </div>
       </div>

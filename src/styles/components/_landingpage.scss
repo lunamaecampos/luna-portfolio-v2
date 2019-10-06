@@ -31,10 +31,10 @@
   animation: 1s ease-out 0.2s 1 nameSlideIn;
   animation-fill-mode: forwards;
   @media (min-width: $mobile-breakpoint) {
-    font-size: $s-size;
+    font-size: $xs-size;
   }
   @media (min-width: $tablet-breakpoint) {
-  font-size: 1.25em;
+  font-size: $s-size;
   }
   @media (min-width: $laptop-breakpoint) {
     font-size: 2em;
@@ -61,7 +61,7 @@
   }
   @media (min-width: $tablet-breakpoint) {
     margin-left: 1em;
-    font-size: 1em;
+    font-size: $s-size;
   }
   @media (min-width: $laptop-breakpoint) {
     margin-left: 1.5em;
@@ -69,7 +69,7 @@
   }
 }
 .landing-subtitle > span {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .landing-icon-row {
   margin-top: 1em;

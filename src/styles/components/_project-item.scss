@@ -2,23 +2,23 @@
   overflow: scroll;
   // width: calc(100vw - 80px);
   // height:100vh;
-  @media (max-width: $tablet-breakpoint) {
+  @media (max-width: $laptop-breakpoint) {
     width: calc(100vw - 25px);
     height: calc(100vh - 60px);
   }
-  @media (min-width: $tablet-breakpoint) and (max-width: $laptop-breakpoint) {
-    left: 24px;
-    position: absolute;
-    direction: rtl;
-    // background-color: orange;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    transform: rotate(270deg) translateX(-100%);
-    transform-origin: top left;
-    // bottom: 0px;
-    width: calc(100vh - 60px);
-    height: calc(100vw - 25px);
-  }
+  // @media (min-width: $tablet-breakpoint) and (max-width: $laptop-breakpoint) {
+  //   left: 24px;
+  //   position: absolute;
+  //   direction: rtl;
+  //   // background-color: orange;
+  //   overflow-y: scroll;
+  //   overflow-x: hidden;
+  //   transform: rotate(270deg) translateX(-100%);
+  //   transform-origin: top left;
+  //   // bottom: 0px;
+  //   width: calc(100vh - 60px);
+  //   height: calc(100vw - 25px);
+  // }
   @media (min-width: $laptop-breakpoint) {
     left: 99px;
     position: absolute;
@@ -41,12 +41,12 @@
   }
 }
 .horizontal-scroll-wrapper{
-  @media (min-width: $tablet-breakpoint) {
-    direction: ltr;
-    transform: rotate(90deg) translateY(calc(-100vh));
-    transform-origin: top left;
-    white-space:nowrap;
-  }
+  // @media (min-width: $tablet-breakpoint) {
+  //   direction: ltr;
+  //   transform: rotate(90deg) translateY(calc(-100vh));
+  //   transform-origin: top left;
+  //   white-space:nowrap;
+  // }
   @media (min-width: $laptop-breakpoint) {
     direction: ltr;
     transform: rotate(90deg) translateY(calc(-100vh + 80px));
@@ -64,20 +64,21 @@
   border-bottom: 1px solid $grey;
   // display:inline-block;
   // position:relative;
-  @media (min-width: $tablet-breakpoint) and (max-width: $laptop-breakpoint){
-    // transform:translateY(50%);
-    bottom: -60px;
-    width:calc(100vw - 25px);
-    height:calc(100vh - 60px);
-    overflow-x: hidden;
-    overflow-y: hidden;
-    display:inline-block;
-    position:relative;
-    // background-color: red;
-    border-right: 1px solid $dark-grey;
-    border-bottom: none;
-  }
+  // @media (min-width: $tablet-breakpoint) and (max-width: $laptop-breakpoint){
+  //   // transform:translateY(50%);
+  //   bottom: -60px;
+  //   width:calc(100vw - 25px);
+  //   height:calc(100vh - 60px);
+  //   overflow-x: hidden;
+  //   overflow-y: hidden;
+  //   display:inline-block;
+  //   position:relative;
+  //   // background-color: red;
+  //   border-right: 1px solid $dark-grey;
+  //   border-bottom: none;
+  // }
   @media (min-width: $laptop-breakpoint) {
+    border-bottom: 1px solid $space-grey;
     overflow-x: hidden;
     overflow-y: hidden;
     vertical-align: top;
@@ -97,8 +98,8 @@
   // height: calc(100vh -82px);
   display: inline-block;
   position: relative;
-  @media (max-width: $tablet-breakpoint) {
-    height: 25px;
+  @media (max-width: $laptop-breakpoint) {
+    height: 150px;
   }
   @media (min-width: $laptop-breakpoint) {
     width: 99px;
@@ -108,15 +109,15 @@
   display: block;
   margin: auto;
   // background-color: red;
-  width: 100%;
-  @media (min-width: $tablet-breakpoint ) and (max-width: $laptop-breakpoint) {
-    display: inline-block;
-    margin: auto;
-    width: 60%;
-  }
+  width: 80%;
+  // @media (min-width: $tablet-breakpoint ) and (max-width: $laptop-breakpoint) {
+  //   display: inline-block;
+  //   margin: auto;
+  //   width: 60%;
+  // }
   @media (min-width: $laptop-breakpoint) {
     display: inline-block;
-    width: 60%;
+    width: 50%;
 
   }
 }
@@ -124,19 +125,21 @@
   @extend .project-column-1;
   vertical-align: top;
   // background-color: purple;
-  @media (min-width: $tablet-breakpoint ) and (max-width: $laptop-breakpoint) {
-    display: inline-block;
-    margin: auto;
-    width: 40%;
-  }
+  // @media (min-width: $tablet-breakpoint ) and (max-width: $laptop-breakpoint) {
+  //   display: inline-block;
+  //   margin: auto;
+  //   width: 40%;
+  // }
   @media (min-width: $laptop-breakpoint) {
     display: inline-block;
     width: 40%;
-
+    // background-color: red;
   }
 }
 
 .project-title {
+  font-family: $nike-font;
+  font-weight: bold;
   margin-left: $l-size;
   margin-bottom: $s-size;
   font-size: 2em;
@@ -152,7 +155,7 @@
 .project-picture {
   // background-color: green;
   display: block;
-  width: 90%;
+  // width: 90%;
   // max-height: 75%;
   height: auto;
   margin-left: auto;
@@ -163,7 +166,7 @@
   animation-fill-mode: forwards;
   color: $nike-black;
   @media(min-width: $tablet-breakpoint) {
-    width: 90%;
+    width: 100%;
   }
   @media (min-width: $laptop-breakpoint) {
     width: 90%;
@@ -221,16 +224,16 @@
   white-space: normal;
   animation: 1s ease-out 0.5s 1 textSlideLeft;
   animation-fill-mode: forwards;
-  @media (max-width: $tablet-breakpoint) {
+  @media (max-width: $laptop-breakpoint) {
     margin: auto;
-    width: 90%;
+    width: 100%;
     // font-size: $font-size-small
   }
-  @media (min-width: $tablet-breakpoint ) and (max-width: $laptop-breakpoint) {
-    margin: auto;
-    width: 280px;
-    // font-size: $font-size-small
-  }
+  // @media (min-width: $tablet-breakpoint ) and (max-width: $laptop-breakpoint) {
+  //   margin: auto;
+  //   width: 280px;
+  //   // font-size: $font-size-small
+  // }
   @media (min-width: $laptop-breakpoint) {
     display: block;
     width: 360px;
@@ -244,11 +247,15 @@
   opacity: 0;
   animation: 1s ease-out 1s 1 textSlideLeft;
   animation-fill-mode: forwards;
+  margin-bottom: 20px;
   @extend .project-description;
   // background: green;
 }
 .project-languages > span {
   font-weight: bold;
+}
+.languages-list {
+  font-family: $nike-font;
 }
 .project-github {
   @extend .project-link

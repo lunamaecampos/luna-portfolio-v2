@@ -27,24 +27,25 @@ export default class AboutPage extends React.Component{
                     <div className="photo-box-two">
                       <img
                       className="portrait"
-                      src="../../images/selfie2.jpg" />
+                      src="../../images/selfie3.jpg" />
                     </div>
                   </div>
                 </div>
                 <div className="text-column">
                   <div className="header1">Hi, my name is <span>Luna Campos</span>.</div>
-                  <p>I'm a hard-working person who likes to call herself a Full-Stack Software Engineer.</p>
+                  <p>I'm a freelance <b>Software Developer</b> and have been building and designing
+                  web applications during my free time for the past two years.</p>
                   <p>I've been actively coding for 3+ years. I enrolled in
-                    Computer Science classes to learn the fundamentals and data structures.
-                    I recieved Dean's List and President's List recognition while taking those classes.
-                    I also attended Coding Dojo's full-stack web developer bootcamp and
-                    recieved their their certificate of completion.
+                    Computer Science classes at Citrus College to learn the fundamentals and data structures.
+                    I recieved Dean's List and President's List recognition while enrolled in those courses.
+                    I also attended Coding Dojo's Full-Stack Web Developer Immersive Bootcamp and
+                    recieved their certificate of completion.
                   </p>
-                  <p> Over the last 2 years, i've been honing my skills with freelance and pet projects.
-                  I'm always ready to work and learn the latest technologies!
-                  </p>
-                  <p>I worked at Lucille's BBQ for 5+ years and have worked other gigs to support myself,
-                  but im ready to make the leap to the tech industry.</p>
+                  <p>The longest job I've held is 5+ years and while working there I became familiar with and practiced the 7 soft skills.</p>
+                  <p>I'm looking to <b>grow</b> and <b>adapt</b> as a software developer and follow the best practices.
+                  I <b>love</b> learning and I'm always ready to work and learn the latest tech.</p>
+                  <p>Some of my hobbies include running 6-10 miles per day, songwriting, music production, recording and repairing vintage analog equipment.</p>
+                  <p className="aboutme-footer"></p>
                 </div>
               </div>
             </div>

@@ -1,5 +1,9 @@
 .form {
+  // height: 100vh;
+  padding-top: $l-size;
+  margin: auto;
   background-color: white;
+  max-width: 80rem;
   display: flex;
   flex-direction: column;
   > * {

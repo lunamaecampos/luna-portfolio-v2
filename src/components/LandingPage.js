@@ -49,7 +49,7 @@ export default class LandingPage extends React.Component {
                   className="landing-icon"
                   src="../../images/mail2.png" /></a>
                 <a target="_blank"
-                  href="/"><img
+                  href="https://firebasestorage.googleapis.com/v0/b/portfolio-v2-69ad3.appspot.com/o/resume%2FCamposLunaResumeOctober2019.pdf?alt=media&token=3bc51114-f2c2-401f-af8b-267a84153a07"><img
                   className="landing-icon"
                   src="../../images/resume2.png" /></a>
                 </div>

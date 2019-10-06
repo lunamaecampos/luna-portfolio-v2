@@ -12,7 +12,7 @@ const DropDown = () => (
     <Link className="li" to="https://www.linkedin.com/in/luna-campos-a8721213b/" target="_blank">Linkedin</Link>
     <Link className="li" to="https://github.com/lunamaecampos" target="_blank">Github</Link>
     <Link className="li" to="mailto:lunamaecampos@gmail.com?subject=I was checking out your Portfolio site" target="_blank">Email</Link>
-    <Link className="li" to="/l" target="_blank">Resume</Link>
+    <Link className="li" to="https://firebasestorage.googleapis.com/v0/b/portfolio-v2-69ad3.appspot.com/o/resume%2FCamposLunaResumeOctober2019.pdf?alt=media&token=3bc51114-f2c2-401f-af8b-267a84153a07" target="_blank">Resume</Link>
   </div>
 );
 class NavBarMenu extends React.Component {
@@ -58,7 +58,7 @@ class NavBarMenu extends React.Component {
             <Link className="navbar-menu-item" to="https://www.linkedin.com/in/luna-campos-a8721213b/" target="_blank">Linkedin</Link>
             <Link className="navbar-menu-item" to="https://github.com/lunamaecampos" target="_blank">Github</Link>
             <Link className="navbar-menu-item" to="mailto:lunamaecampos@gmail.com?subject=I was checking out your Portfolio Site" target="_blank">Email</Link>
-            <Link className="navbar-menu-item" to="/l" target="_blank">Resume</Link>
+            <Link className="navbar-menu-item" to="https://firebasestorage.googleapis.com/v0/b/portfolio-v2-69ad3.appspot.com/o/resume%2FCamposLunaResumeOctober2019.pdf?alt=media&token=3bc51114-f2c2-401f-af8b-267a84153a07" target="_blank">Resume</Link>
           </div>
     )
   }
