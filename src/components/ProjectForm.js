@@ -38,7 +38,6 @@ export default class ProjectForm extends React.Component {
   handleProgress = progress => this.setState({ progress });
   handleUploadError = error => {
     this.setState({ isUploading: false });
-    console.log(error);
   };
   handleUploadSuccess = filename => {
     this.setState({ picture: filename, progress: 100, isUploading: false });

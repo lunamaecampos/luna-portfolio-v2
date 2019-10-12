@@ -27,7 +27,7 @@ export default class AboutPage extends React.Component{
                     <div className="photo-box-two">
                       <img
                       className="portrait"
-                      src="../../images/selfie3.jpg" />
+                      src="../../images/selfie3.JPG" />
                     </div>
                   </div>
                 </div>
@@ -37,14 +37,14 @@ export default class AboutPage extends React.Component{
                   web applications during my free time for the past two years.</p>
                   <p>I've been actively coding for 3+ years. I enrolled in
                     Computer Science classes at Citrus College to learn the fundamentals and data structures.
-                    I recieved Dean's List and President's List recognition while enrolled in those courses.
+                    I received Dean's List and President's List recognition while enrolled in those courses.
                     I also attended Coding Dojo's Full-Stack Web Developer Immersive Bootcamp and
-                    recieved their certificate of completion.
+                    received their certificate of completion.
                   </p>
-                  <p>The longest job I've held is 5+ years and while working there I became familiar with and practiced the 7 soft skills.</p>
-                  <p>I'm looking to <b>grow</b> and <b>adapt</b> as a software developer and follow the best practices.
-                  I <b>love</b> learning and I'm always ready to work and learn the latest tech.</p>
-                  <p>Some of my hobbies include running 6-10 miles per day, songwriting, music production, recording and repairing vintage analog equipment.</p>
+                  <p>My employment history has allowed me to become familiar with and practice the <b>7 soft skills</b>.  A majority of my work history includes holding a job at the same company for 5+ years and leaving to persue interests in coding.</p>
+                  <p>I'm looking to <b>grow</b> and <b>adapt</b> as a software developer and <b>follow the best practices</b>.
+                  I <b>love learning</b> and I'm <b>always ready to work</b> and learn the latest tech.</p>
+                  <p>Aside from programming, some of my hobbies include running 6-10 miles per day, songwriting, music production, recording and repairing vintage analog equipment.</p>
                   <p className="aboutme-footer"></p>
                 </div>
               </div>

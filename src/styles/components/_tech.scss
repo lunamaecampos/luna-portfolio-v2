@@ -7,6 +7,10 @@
   flex-wrap: wrap;
   // background-color: $terminal-black;
   overflow: scroll;
+  -ms-overflow-style: none;
+}
+.tech-card::-webkit-scrollbar {
+  display: none;
 }
 .tech-subtitle-header-1{
   @media (max-width: $laptop-breakpoint) {

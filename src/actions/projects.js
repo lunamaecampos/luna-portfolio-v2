@@ -1,7 +1,6 @@
 import uuid from 'uuid';
 import database from '../firebase/firebase';
 
-console.log('hello');
 // ADD_PROJECT
 export const addProject = (project) => ({
   type: 'ADD_PROJECT',
@@ -69,9 +68,7 @@ export const setProjects = (projects) =>  ({
 
 export const startSetProjects = () => {
   return (dispatch, getState) => {
-    console.log('hello');
     const uid = 'm5NjKeagyUWf1az7n8PfkMcFynS2';
-    console.log('hi im working hello');
     return database.ref(`users/m5NjKeagyUWf1az7n8PfkMcFynS2/projects`).once('value').then((snapshot) => {
         const projects = [];
         snapshot.forEach((childSnapshot) => {

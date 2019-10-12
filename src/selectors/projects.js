@@ -6,7 +6,6 @@ export default (projects, {text, sortBy, startDate, endDate}) => {
     const createdAtMoment = moment(project.createdAt);
     const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day') : true ;
     const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day') : true ;
-    console.log(project);
     const textMatch = project.description.toLowerCase().includes(text.toLowerCase());
 
     return startDateMatch && endDateMatch && textMatch;

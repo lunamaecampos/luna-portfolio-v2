@@ -48,7 +48,7 @@ class SearchWriter extends React.Component {
         placeholder={this.state.text}
         value={this.props.filters.text}
         onChange={this.onTextChange}
-        autoFocus />
+        />
 
     );
   }
