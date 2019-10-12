@@ -14,13 +14,12 @@ class TypeWriter extends React.Component {
   }
 
   handleType = () => {
+    let {loopNum, text, index} = this.state;
     const { dataText } = this.props;
-    const {loopNum, text} = this.state;
     const i = loopNum % dataText.length;
     const fullText = dataText[i];
-    let { index } = this.state;
-    let word = fullText.slice(0, index);
-    let textColor = ['#97C379', '#E5C07B', '#AE4B44', '#9662AA', '#60AFEF'];
+    const word = fullText.slice(0, index);
+    const textColor = ['#97C379', '#E5C07B', '#AE4B44', '#9662AA', '#60AFEF'];
 
     this.setState({text: word, index:++index, textColor: textColor[i]});
     if(word.length === fullText.length) {
